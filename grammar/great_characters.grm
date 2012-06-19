@@ -1,0 +1,21 @@
+I ::= "Personaggioni";
+
+S ::= (Saluto Frase ^".").(SA|RG);
+
+Saluto ::= ("Ciao"|"Salve"|("Un saluto" [festoso|allegrotto|un po' mesto])) [a tutti] (^"," sono|da) Personaggio ^".";
+
+Personaggio ::= SA: "Salvatore Aranzollo" | RG: "Roberto Giacobbo" | GM: "io insegno Ingegneria Informatica";
+
+Frase ::= SA: (["Sono un esperto di Sicurezza Informatica."] ["Linux è" AggettivoNegativo [[^"," AggettivoNegativo] e AggettivoNegativo] ^"." "Installate un antivirus e siete apposto."] "Oggi impareremo" >(come condividere una foto su SocialNetwork|come chattare su SocialNetwork|"come duplicare un DVD"|"come realizzare un sito Web"|"come diventare Hacker"|come iscriverci a SocialNetwork))
+
+
+| RG: ([("Scrivo libri"|"Conduco programmi televisivi") pieni di ComplementoOggetto [[^","ComplementoOggetto] e ComplementoOggetto] ^"."] "Oggi nella nostra puntata di Mistero parleremo" >(Argomento [[^","Argomento] [^","Argomento] e Argomento]))
+
+| GM: ("RGB significa red, green e beige");
+
+SocialNetwork ::= facebook|twitter|foursquare|"google+";
+
+Argomento ::= "dell'uomo-orso-maiale"| del chupacabra | dei maya | degli alieni | del temibile nano con ascia | dei puffi | "degli Avengers";
+
+ComplementoOggetto ::= cazzate|menzogne|stupidaggini|idiozie|certezze;
+AggettivoNegativo ::= brutto|vecchio|deprecato|difficile; 
